@@ -6,18 +6,23 @@
 
 ![Screenshot](/web_app_image.png?raw=true)
 
-## Key Features
+## Overview
 
 * A web interface for Single-Domain and Cross-Domain Recommender System
-* Uses data collected from Facebook about users personal preferences in two domains: movies and books
-* Works with RDF dataset generated from Facebook data and contains incoming and outgoing Dbpedia edges for items
-* Computes RDF2Vec and Doc2Vec Embeddings for DBpedia graph entities to compute similarities
+* Based on techniques described in [Word2Vec](https://arxiv.org/pdf/1310.4546.pdf), [Doc2Vec](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) and [RDF2Vec](https://ub-madoc.bib.uni-mannheim.de/41307/1/Ristoski_RDF2Vec.pdf)
+* Uses dataset collected from Facebook about users' personal preferences in two domains: movies and books
+* An RDF dataset is generated from Facebook dataset which contains incoming and outgoing Dbpedia edges for items in FB dataset
+
+## Working
+
+* First it computes RDF2Vec and Doc2Vec Embeddings for DBpedia graph entities to compute similarities between items
 * To compute RDF2Vec Embeddings:
-  - Converts RDF graphs into sequences of entities and relations using Graph Walks
-  - Train a neural language model where each entity and relation is represented as N-dimensional numerical vector
+  - It converts RDF graphs into sequences of entities and relations using Graph Walks
+  - It then trains a neural language model where each entity and relation is represented as N-dimensional numerical vector
 * To compute Doc2Vec Embeddings:
-  - Along with word vectors, it also trains a paragraph vector which contains numerical representation of DBpedia item abstract
-* Computes dot product similarity between latent representation of graph entities and sort items based on similarity scores
+  - Along with word vectors, it also trains a paragraph vector which contains numerical representation of item's abstract in DBpedia
+* Finally, it computes dot product similarity between latent representation of graph entities and sort items based on similarity scores
+* For simplicity, we have already computed Embedding files for Doc2Vec and RDF2Vec and shipping it with the code.
 
 ## How To Use
 
