@@ -60,7 +60,7 @@ A web interface for Single-Domain and Cross-Domain Recommender System. We will u
   - Windows, Mac and Linux ready.
   
 
-![screenshot](/Cross-Domain-Recommender-System/web_app_image.png)
+![Screenshot](/screenshot.png?raw=true)
 
 
 ## How To Use
