@@ -13,10 +13,10 @@
 * Works with RDF dataset generated from Facebook data and contains incoming and outgoing Dbpedia edges for items
 * Computes RDF2Vec and Doc2Vec Embeddings for DBpedia graph entities to compute similarities
 * To compute RDF2Vec Embeddings:
- - Converts RDF graphs into sequences of entities and relations using Graph Walks
- - Train a neural language model where each entity and relation is represented as N-dimensional numerical vector
+  - Converts RDF graphs into sequences of entities and relations using Graph Walks
+  - Train a neural language model where each entity and relation is represented as N-dimensional numerical vector
 * To compute Doc2Vec Embeddings:
- - Along with word vectors, it also trains a paragraph vector which contains numerical representation of DBpedia item abstract
+  - Along with word vectors, it also trains a paragraph vector which contains numerical representation of DBpedia item abstract
 * Computes dot product similarity between latent representation of graph entities and sort items based on similarity scores
 
 ## How To Use
